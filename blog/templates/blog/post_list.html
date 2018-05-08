@@ -1,0 +1,18 @@
+<!DOCTYPEhtml>
+<html>
+<head>
+<title> python </title>
+</head>
+<body>
+    <div><h1><a href=""> Django's Blog App</a></h1></div>
+    {% for post in posts %}
+    <div>
+        <p>Published Date : {{post.create_at|date:"Y-m-d g:i a"}}</p>
+        <p>{{post.title}}</p>
+        <p>{{post.content|linebreaksbr}}</p>
+    </div>
+    <hr/>
+    {% endfor %}
+</body>
+
+</html>
